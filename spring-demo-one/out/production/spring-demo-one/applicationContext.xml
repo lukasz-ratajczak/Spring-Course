@@ -8,9 +8,9 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="myCoach"
-            class="com.luv2code.springdemo.BaseballCoach">
+            class="com.luv2code.springdemo.FootballCoach">
     </bean>
-    <!-- 
+    <!--
 	Add a logger config to see logging messages.
 	- For more detailed logs, set values to "FINEST"
 	- For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html
