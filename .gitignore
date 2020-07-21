@@ -159,6 +159,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/spring-and-hibernate-for-beginners-master
+.spring-and-hibernate-for-beginners-master
 
 
 # End of https://www.gitignore.io/api/git,java,maven,eclipse,windows
