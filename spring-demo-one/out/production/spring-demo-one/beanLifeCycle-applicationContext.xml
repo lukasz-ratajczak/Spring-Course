@@ -6,20 +6,6 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <bean id="myFortuneService"
-          class="com.luv2code.springdemo.HappyFortuneService">
-    </bean>
-
-    <bean id="myCoach"
-          class="com.luv2code.springdemo.TrackCoach"
-          scope="prototype">
-
-        <constructor-arg ref="myFortuneService" />
-    </bean>
-
-
-
     <!--
 	Add a logger config to see logging messages.
 	- For more detailed logs, set values to "FINEST"
@@ -29,6 +15,24 @@
         <property name="rootLoggerLevel" value="FINE" />
         <property name="printedLoggerLevel" value="FINE"/>
     </bean>
+
+
+
+    <bean id="myFortuneService"
+          class="com.luv2code.springdemo.HappyFortuneService">
+    </bean>
+
+    <bean id="myCoach"
+          class="com.luv2code.springdemo.TrackCoach"
+          init-method="doMyStartupStuff"
+        destroy-method="doMyCleanupStuff">
+
+        <constructor-arg ref="myFortuneService" />
+    </bean>
+
+
+
+
 </beans>
 
 
