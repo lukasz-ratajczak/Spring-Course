@@ -19,6 +19,9 @@
           class="com.luv2code.springdemo.CricketCoach">
 
         <property name="fortuneService" ref="myFortuneService" />
+        <property name="emailAddress" value="supercoach62@cmail.com" />
+        <property name="team" value="Sunrises Hyperbad" />
+
     </bean>
 
 

@@ -2,10 +2,29 @@ package com.luv2code.springdemo;
 
 public class CricketCoach implements Coach{
 
+    private String team, emailAddress;
     private FortuneService fortuneService;
 
     public CricketCoach() {
         System.out.println("CricketCoach: inside no-arg constructor");
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        System.out.println("CricketCoach: inside setTeam");
+        this.team = team;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        System.out.println("CricketCoach: inside setEmailAddress");
+        this.emailAddress = emailAddress;
     }
 
     public void setFortuneService(FortuneService fortuneService) {
