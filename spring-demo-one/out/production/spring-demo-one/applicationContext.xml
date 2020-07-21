@@ -6,6 +6,10 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:sport.properties"/>
+
+
     <bean id="myFortuneService"
           class="com.luv2code.springdemo.HappyFortuneService">
     </bean>
@@ -19,8 +23,9 @@
           class="com.luv2code.springdemo.CricketCoach">
 
         <property name="fortuneService" ref="myFortuneService" />
-        <property name="emailAddress" value="supercoach62@cmail.com" />
-        <property name="team" value="Sunrises Hyperbad" />
+
+        <property name="emailAddress" value="${foo.email}" />
+        <property name="team" value="${foo.team}" />
 
     </bean>
 
