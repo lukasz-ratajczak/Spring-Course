@@ -19,3 +19,4 @@ public class RandomFortuneService implements FortuneService {
         return data[i];
     }
 }
+
