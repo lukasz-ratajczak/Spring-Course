@@ -1,16 +1,15 @@
 package com.luv2code.springdemo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
 @Component
 public class RandomFortuneService implements FortuneService {
-    private String[] data ={
-            "Beware of the wolf",
-            "Diligence is the mother of good luck",
-            "The journey is the reward"
-    };
+
+    @Value("${rand.fortune}")
+    private String[] data;
 
     private Random random = new Random();
 
