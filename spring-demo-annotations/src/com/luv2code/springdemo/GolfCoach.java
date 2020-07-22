@@ -8,4 +8,9 @@ public class GolfCoach implements Coach {
     public String getDailyWorkout() {
         return "Practice your hand and position";
     }
+
+    @Override
+    public String getDailyFortune() {
+        return null;
+    }
 }
