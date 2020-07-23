@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-<h2>Spring MVC Demo - Home Page</h2>
-
-<hr>
-<a href="showForm">Hello World form</a>
+Hello World of Spring!
+<br><br>
+Student name: ${param.studentName}
 </body>
 </html>
