@@ -12,6 +12,8 @@
     <title>Student Confirmation</title>
 </head>
 <body>
-The student is confirmed: ${student.firstName} ${student.lastName} is from ${student.country}
+The student is confirmed: ${student.firstName} ${student.lastName} <br>
+Country: ${student.country}<br>
+Favourite Language: ${student.favoriteLanguage}<br>
 </body>
 </html>
