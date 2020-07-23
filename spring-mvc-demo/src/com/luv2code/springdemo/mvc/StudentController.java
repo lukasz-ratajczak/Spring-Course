@@ -5,8 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.net.http.HttpHeaders;
-
 @Controller
 @RequestMapping("/student")
 public class StudentController {
@@ -21,7 +19,7 @@ public class StudentController {
 
     @RequestMapping("/processForm")
     public String processForm(@ModelAttribute("student") Student theStudent) {
-        System.out.println("theStudent: " + theStudent.getFirstName() + " " + theStudent.getLastName());
+        System.out.println("theStudent: " + theStudent.getFirstName() + " " + theStudent.getLastName() + " " + theStudent.getCountry());
 
         return "student-confirmation";
     }
