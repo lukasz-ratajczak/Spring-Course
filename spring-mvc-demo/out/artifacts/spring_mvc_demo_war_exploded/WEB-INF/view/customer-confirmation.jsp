@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-The student is confirmed: ${customer.firstName} ${customer.lastName} <br>
+The customer is confirmed: ${customer.firstName} ${customer.lastName} <br>
+Free passes: ${customer.freePasses}<br>
 </body>
 </html>
