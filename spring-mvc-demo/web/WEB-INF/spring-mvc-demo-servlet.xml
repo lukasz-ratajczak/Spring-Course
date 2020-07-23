@@ -24,6 +24,10 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+			<property name="basenames" value="resources/messages"/>   <!--	It works. IntelliJ shows a proper message, but here give an error.-->
+	</bean>
 </beans>
 
 
