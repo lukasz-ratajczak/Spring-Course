@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
     <title>Student Confirmation</title>
@@ -15,5 +16,11 @@
 The student is confirmed: ${student.firstName} ${student.lastName} <br>
 Country: ${student.country}<br>
 Favourite Language: ${student.favoriteLanguage}<br>
+Operating system:
+<ul>
+    <c:forEach var="temp" items="${student.operatingSystem}">
+            <li>${temp}</li>
+        </c:forEach>
+</ul><br>
 </body>
 </html>
