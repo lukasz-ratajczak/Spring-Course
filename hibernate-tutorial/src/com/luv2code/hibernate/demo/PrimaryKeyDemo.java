@@ -17,13 +17,17 @@ public class PrimaryKeyDemo {
         Session session = factory.getCurrentSession();
 
         try {
-            System.out.println("Creating new student object ...");
-            Student tempStudent = new Student("Paul", "Wall", "paul@luv2code.com");
+            System.out.println("Creating new students objects ...");
+            Student tempStudent1 = new Student("John", "Doe", "john@luv2code.com");
+            Student tempStudent2 = new Student("Marry", "Public", "marry@luv2code.com");
+            Student tempStudent3 = new Student("Bonita", "Applebum", "bonita@luv2code.com");
 
             session.beginTransaction();
 
-            System.out.println("Saving the student");
-            session.save(tempStudent);
+            System.out.println("Saving the students");
+            session.save(tempStudent1);
+            session.save(tempStudent2);
+            session.save(tempStudent3);
 
             session.getTransaction().commit();
             System.out.println("Done!");
