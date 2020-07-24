@@ -22,7 +22,7 @@ public class QueryStudentDemo {
         try {
             session.beginTransaction();
 
-            List<Student> theStudents = session.createQuery("from Student").list();
+            List theStudents = session.createQuery("from Student").list();
 
             displayStudents(theStudents);
 
