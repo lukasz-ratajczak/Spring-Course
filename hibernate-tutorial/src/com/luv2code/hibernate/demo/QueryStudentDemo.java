@@ -53,7 +53,7 @@ public class QueryStudentDemo {
 
     private static void displayStudents(List<Student> theStudents) {
         for (Student tempStudent : theStudents) {
-            System.out.println(tempStudent);
+            System.out.println(tempStudent)-;
         }
     }
 }

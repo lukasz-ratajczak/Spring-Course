@@ -11,6 +11,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
+          <factory-entry name="Practice Activity #8 - Hibernate Development" />
           <factory-entry name="hibernate-tutorial" />
         </datasource-mapping>
         <naming-strategy-map />
