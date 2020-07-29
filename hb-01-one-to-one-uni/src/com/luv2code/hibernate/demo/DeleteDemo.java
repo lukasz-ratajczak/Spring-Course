@@ -30,7 +30,7 @@ public class DeleteDemo {
             System.out.println("Found instructor: "+tempInstructor);
 
             if(tempInstructor!=null){
-                System.out.println("Deliting: "+tempInstructor );
+                System.out.println("Deleting: "+tempInstructor );
 
                 session.delete(tempInstructor);
             }
