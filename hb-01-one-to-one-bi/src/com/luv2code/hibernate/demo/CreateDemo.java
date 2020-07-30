@@ -21,17 +21,17 @@ public class CreateDemo {
         Session session = factory.getCurrentSession();
 
         try {
-//            Instructor tempInstructor =
-//                    new Instructor("Chad", "Darby", "darby@luv2code.com");
-//
-//            InstructorDetail tempInstructorDetail =
-//                    new InstructorDetail("luv2code.com/youtube", "luv 2 code!");
-
             Instructor tempInstructor =
-                    new Instructor("Madhu", "Patel", "mahdu@luv2code.com");
+                    new Instructor("Chad", "Darby", "darby@luv2code.com");
 
             InstructorDetail tempInstructorDetail =
-                    new InstructorDetail("youtube.com/guitar", "guitar");
+                    new InstructorDetail("luv2code.com/youtube", "luv 2 code!");
+
+//            Instructor tempInstructor =
+//                    new Instructor("Madhu", "Patel", "mahdu@luv2code.com");
+//
+//            InstructorDetail tempInstructorDetail =
+//                    new InstructorDetail("youtube.com/guitar", "guitar");
 
             tempInstructor.setInstructorDetail(tempInstructorDetail);
 
