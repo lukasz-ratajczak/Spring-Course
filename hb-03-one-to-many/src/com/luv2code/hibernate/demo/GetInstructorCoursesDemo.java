@@ -1,10 +1,15 @@
-package com.luv2code.hibernate.demo.entity;
+package com.luv2code.hibernate.demo;
 
+import com.luv2code.hibernate.demo.entity.Course;
+import com.luv2code.hibernate.demo.entity.Instructor;
+import com.luv2code.hibernate.demo.entity.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class GetInstructorDetailDemo {
+import javax.persistence.criteria.CriteriaBuilder;
+
+public class GetInstructorCoursesDemo {
 
 
     public static void main(String[] args) {
@@ -13,31 +18,26 @@ public class GetInstructorDetailDemo {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
 
         try {
-            int theId = 2;
-
             session.beginTransaction();
 
-            InstructorDetail tempInstructorDetail =
-                    session.get(InstructorDetail.class, theId);
+            int theId = 1;
 
-            System.out.println("tempInstructorDetail: "+tempInstructorDetail);
+            Instructor tempInstructor = session.get(Instructor.class,theId);
 
-            System.out.println("the associated instructor: "+tempInstructorDetail.getInstructor());
+            System.out.println("Instructor: "+tempInstructor);
+
+            System.out.println("Courses: "+tempInstructor.getCourses());
 
             session.getTransaction().commit();
             System.out.println("Done!");
 
-        }
-        catch(Exception exc){
-            exc.printStackTrace();
-        }
-
-        finally {
+        } finally {
             session.close();
             factory.close();
         }
