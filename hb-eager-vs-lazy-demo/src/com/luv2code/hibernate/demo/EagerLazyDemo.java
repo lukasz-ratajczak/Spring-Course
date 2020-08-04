@@ -28,12 +28,12 @@ public class EagerLazyDemo {
 
             Instructor tempInstructor = session.get(Instructor.class,theId);
 
-            System.out.println("Instructor: "+tempInstructor);
+            System.out.println("luv2code: Instructor: "+tempInstructor);
 
-            System.out.println("Courses: "+tempInstructor.getCourses());
+            System.out.println("luv2code: Courses: "+tempInstructor.getCourses());
 
             session.getTransaction().commit();
-            System.out.println("Done!");
+            System.out.println("luv2code: Done!");
 
         } finally {
             session.close();
