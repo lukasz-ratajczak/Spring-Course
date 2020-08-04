@@ -33,10 +33,15 @@ public class EagerLazyDemo {
             System.out.println("luv2code: Courses: "+tempInstructor.getCourses());
 
             session.getTransaction().commit();
+            session.close();
+            System.out.println("\nluv2code: SESSION IS CLOSED\n");
+
+            System.out.println("luv2code: Courses: "+tempInstructor.getCourses());
+
             System.out.println("luv2code: Done!");
 
         } finally {
-            session.close();
+
             factory.close();
         }
 
