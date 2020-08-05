@@ -3,7 +3,7 @@ package com.luv2code.hibernate.demo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="course")
+@Table(name="review")
 public class Review {
 
     @Id
