@@ -8,7 +8,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class CreateCourseAndReviewsDemo {
+import javax.swing.*;
+
+public class GetCourseAndReviewsDemo {
 
 
     public static void main(String[] args) {
@@ -26,19 +28,12 @@ public class CreateCourseAndReviewsDemo {
         try {
             // start a transaction
             session.beginTransaction();
+            int theId = 27;
 
+            Course tempCourse = session.get(Course.class,theId);
 
-            Course tempCourse = new Course("Pacman - How To Score One Million Points");
-
-            tempCourse.addReview(new Review("Great course ... loved it!"));
-            tempCourse.addReview(new Review("Cool course, job well done"));
-            tempCourse.addReview(new Review("What a dumb course, you are an idiot!"));
-
-            System.out.println("Saving the course");
             System.out.println(tempCourse);
             System.out.println(tempCourse.getReviews());
-
-            session.save(tempCourse);
 
             session.getTransaction().commit();
 
