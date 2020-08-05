@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="instructor")
+@Table(name = "instructor")
 public class Instructor {
 
     @Id
@@ -23,10 +23,10 @@ public class Instructor {
     private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="instructor_detail_id")
+    @JoinColumn(name = "instructor_detail_id")
     private InstructorDetail instructorDetail;
 
-    @OneToMany(mappedBy = "instructor", cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "instructor", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private List<Course> courses;
 
     public Instructor() {
@@ -97,8 +97,8 @@ public class Instructor {
                 '}';
     }
 
-    public void add(Course tempCourse){
-        if (courses == null){
+    public void add(Course tempCourse) {
+        if (courses == null) {
             courses = new ArrayList<>();
         }
         courses.add(tempCourse);
