@@ -8,4 +8,6 @@ import java.util.List;
 public interface CustomerDAO {
 
     List<Customer> getCustomers();
+
+    public void saveCustomer(Customer customer);
 }
