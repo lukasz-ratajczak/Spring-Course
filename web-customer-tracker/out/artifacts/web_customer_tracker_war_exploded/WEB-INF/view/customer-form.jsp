@@ -24,13 +24,15 @@
     <h3>Save Customer</h3>
     <form:form action="saveCustomer" modelAttribute="customer" method="post">
 
+        <form:hidden path="id"/>
+
         <table>
             <tbody>
             <tr>
                 <td><label>First Name</label></td>
                 <td><form:input path="firstName"/></td>
             </tr>
-            <tr>
+            <tr>-
                 <td><label>Last Name</label></td>
                 <td><form:input path="lastName"/></td>
             </tr>
