@@ -42,6 +42,21 @@ public class CustomerDAOImpl implements CustomerDAO{
         query.executeUpdate();
     }
 
+    @Override
+    public List<Customer> searchCustomers(String searchName) {
+
+        Query query = null;
+        if (searchName != null && searchName.trim().length()>0){
+            query = getSession().createQuery("from Customer where lower(firstName) like :theName or lower(lastName) like :theName",
+                    Customer.class);
+            query.setParameter("theName", "%" + searchName.toLowerCase() + "%");
+        }else {
+            query = getSession().createQuery("from Customer", Customer.class);
+        }
+
+        return (List<Customer>) query.getResultList();
+    }
+
     private Session getSession() {
         return sessionFactory.getCurrentSession();
     }

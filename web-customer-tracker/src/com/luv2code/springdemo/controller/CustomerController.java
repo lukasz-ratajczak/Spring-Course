@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.jws.WebParam;
 import java.util.List;
 
 @Controller
@@ -58,6 +59,13 @@ public class CustomerController {
 
 		customerService.deleteCustomer(id);
 		return "redirect:/customer/list";
+	}
+	@GetMapping("/search")
+	public String searchCustomers(@RequestParam("theSearchName") String searchName, Model model){
+
+		List<Customer> customers = customerService.searchCustomers(searchName);
+		model.addAttribute("customers", customers);
+		return "list-customers";
 	}
 	
 }
