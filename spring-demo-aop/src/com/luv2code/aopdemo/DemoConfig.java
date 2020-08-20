@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
 @ComponentScan("com.luv2code.aopdemo")
 public class DemoConfig {
 
-    
+
 
 }
