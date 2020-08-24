@@ -15,10 +15,10 @@ public class MainDemoApp {
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
         MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 
-        accountDAO.addAccount();
-        accountDAO.addAccount();
+        Account account = new Account();
 
-        membershipDAO.addSilly();
+        accountDAO.addAccount(account, true);
+
         membershipDAO.addSilly();
 
         context.close();
