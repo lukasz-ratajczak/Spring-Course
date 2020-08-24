@@ -18,8 +18,10 @@ public class MainDemoApp {
         Account account = new Account();
 
         accountDAO.addAccount(account, true);
+        accountDAO.doWork();
 
         membershipDAO.addSilly();
+        membershipDAO.goToSleep();
 
         context.close();
 
