@@ -26,14 +26,20 @@ public class MyDemoLoggingAspect {
 
         long begin = System.currentTimeMillis();
 
-        Object result = proceedingJoinPoint.proceed();
+        Object result = null;
 
+        try {
+            result = proceedingJoinPoint.proceed();
+        } catch (Exception e){
+            logger.warning(e.getMessage());
+            result = "Major accident! 'Copter is on da way!";
+        }
         long end = System.currentTimeMillis();
 
         long duration = end - begin;
 
         logger.info("\n=========> Duration: "+duration/1000+" seconds");
-
+        
         return result;
     }
 
