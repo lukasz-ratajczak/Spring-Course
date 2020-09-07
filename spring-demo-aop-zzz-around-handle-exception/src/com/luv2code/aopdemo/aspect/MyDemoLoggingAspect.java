@@ -32,7 +32,7 @@ public class MyDemoLoggingAspect {
             result = proceedingJoinPoint.proceed();
         } catch (Exception e){
             logger.warning(e.getMessage());
-            result = "Major accident! 'Copter is on da way!";
+            throw e;
         }
         long end = System.currentTimeMillis();
 

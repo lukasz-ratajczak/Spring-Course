@@ -22,7 +22,7 @@ public class AroundHandleExceptionDemoApp {
 
         boolean tripWire = true;
 
-        fortuneService.getFortune(tripWir-e);
+        fortuneService.getFortune(tripWire);
 
         logger.info("\nMy fortune is: "+fortuneService.getFortune());
 
