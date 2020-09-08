@@ -70,5 +70,6 @@
     <orderEntry type="library" name="Spring MVC-5.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Spring-5.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Spring Webflow-2.4.0" level="project" />
+    <orderEntry type="library" name="aspectjweaver-1.9.6" level="project" />
   </component>
 </module>
