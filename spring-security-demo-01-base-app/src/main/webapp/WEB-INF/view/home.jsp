@@ -13,6 +13,18 @@
 	<br><br>
 	Role(s): <security:authentication property="principal.authorities"/>
 	<hr>
+
+	<p>
+		<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+		(Only for Manager peeps)
+	</p>
+	<hr>
+	<p>
+		<a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
+		(Only for Admin peeps)
+	</p>
+
+	<hr>
 	<p>
 	Welcome to the luv2code company home page!
 	</p>
