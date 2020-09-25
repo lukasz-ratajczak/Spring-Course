@@ -18,15 +18,18 @@ public class CustomerRestController {
     CustomerService customerService;
 
     @GetMapping("/customers")
-    public List<Customer> getCustomers(){
+    public List<Customer> getCustomers() {
         return customerService.getCustomers();
     }
 
     @GetMapping("/customers/{customerId}")
-    public Customer getCustomer(@PathVariable int customerId){
+    public Customer getCustomer(@PathVariable int customerId) {
+
+        if (customerService.getCustomer(customerId) == null) {
+            throw new CustomerNotFoundException("Customer id not found - " + customerId);
+        }
         return customerService.getCustomer(customerId);
     }
-
 
 
 }
